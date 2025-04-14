@@ -1,1 +1,15 @@
-Poyecto para Academia Globe# GlobeFE
+# 🌟 Globe - Frontend  
+📚 **Plataforma para Academia de Inglés Globe School, Gijón**  
+
+---
+
+## 📌 **Descripción del Proyecto**  
+
+---
+
+## 🛠️ **Tecnologías Utilizadas**  
+
+---
+
+## 📂 **Estructura del Proyecto**  
+
