@@ -5,7 +5,11 @@ export default {
       "./src/**/*.{hotml,css,js,ts,jsx,tsx}",
     ],
     theme: {
-      extend: {},
+      extend: {
+        fontFamily: {
+          'albert-sans': ['"Albert Sans-Bold"', 'Helvetica', 'sans-serif'],
+        },
+      },
     },
     plugins: [],
   };
