@@ -7,7 +7,7 @@ import Search from "../assets/icons/Loupe.svg";
 
 export const Footer = () => {
   return (
-    <footer className="bottom-0 left-0 right-0 bg-white shadow-md py-4 px-8 flex justify-between items-center z-40">
+    <footer className="h-16 bg-white shadow-inner border-t border-gray-200 py-4 px-8 flex justify-between items-center z-20">
       <Link to="/Menu">
         <img src={Menu} alt="Menu" className="h-6 w-6" />
       </Link>

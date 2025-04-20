@@ -1,10 +1,8 @@
 import React from "react";
-import { Footer } from "../components/Footer";
 import Salida from "../assets/Salida.svg";
-import { UserCard } from "../components/UserCard";
-import userIcon from "../assets/icons/User.svg";
+import { Footer } from "../components/Footer";
 
-export const UserProfile = () => {
+export const MenuLayout = ({ children }) => {
   return (
     <div className="relative w-full h-screen flex flex-col justify-between overflow-hidden">
 
@@ -16,17 +14,10 @@ export const UserProfile = () => {
         />
 
         <div className="relative z-10 flex justify-center items-center h-full">
-          <UserCard
-            name="Lucia González"
-            userIcon={userIcon}
-            level="B2"
-            academy="La Calzada"
-            teacher="Nadia"
-            atendance={false}
-          />
+          {children}
         </div>
-      </div>
 
+      </div>
       <Footer />
     </div>
   );
