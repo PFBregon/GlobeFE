@@ -6,4 +6,7 @@ export const Button = ( { onClick }) => {
         <div className="text-wrapper absolute left-[27px] top-1/2 transform -translate-y-1/2 text-white font-albert-sans font-bold text-[36px]">
     Iniciar sesión
   </div>
-</di
+</div>
+    );
+};
+  

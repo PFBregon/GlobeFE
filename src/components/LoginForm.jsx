@@ -15,7 +15,7 @@ export function LoginForm() {
 
     if (username === "lucia" && password === "1234") {
       localStorage.setItem("user", username);
-      navigate("/perfil");
+      navigate("/UserProfile");
     } else {
       setError("Usuario o contraseña incorrectos.");
     }
