@@ -64,14 +64,14 @@ export function LoginForm() {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white rounded-lg shadow-lg p-6 w-[300px] text-center relative">
             <button
-              className="absolute top-2 right-3 text-gray-500 hover:text-black text-xl"
+              className="absolute top-2 right-3 text-gray-500 hover:text-black text-m"
               onClick={() => setShowModal(false)}
             >
               ×
             </button>
             <h2 className="text-xl font-bold mb-2">Información</h2>
             <p className="text-sm text-gray-700">
-              Usuario y contraseña están facilitados por Globe School. Si necesita cambiar su información de acceso, pongase en contacto con Globe School.  
+              Este usuario y contraseña están facilitados por Globe School. Si necesita cambiar su información de acceso, pongase en contacto con Globe School. <br /> 
               ©2025 Nubaria - Todos los derechos reservados.
             </p>
           </div>
