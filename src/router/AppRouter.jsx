@@ -5,6 +5,7 @@ import { UserProfile } from "../pages/UserProfile";
 import { Contact } from "../pages/Contact";
 import { Search } from "../pages/Search";
 import { Menu } from "../pages/Menu";
+import { Notifications } from "../pages/Notifications";
 
 
 export const AppRouter = () => (
@@ -15,5 +16,6 @@ export const AppRouter = () => (
     <Route path="/Contact" element={<Contact />} />
     <Route path="/Search" element={<Search />} />
     <Route path="/Menu" element={<Menu />} />
+    <Route path="/notifications" element={<Notifications />} />
   </Routes>
 );

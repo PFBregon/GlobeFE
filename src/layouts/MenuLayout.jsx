@@ -1,6 +1,5 @@
 import React from "react";
 import Salida from "../assets/Salida.svg"; 
-import CardSVG from "../assets/Card.svg"; 
 import { Footer } from "../components/Footer";
 
 export const MenuLayout = ({ children }) => {
