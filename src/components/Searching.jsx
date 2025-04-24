@@ -23,7 +23,8 @@ export const Searching = () => {
           placeholder="Buscar..."
           value={query}
           onChange={handleChange}
-          className="w-full pl-4 pr-10 h-12 rounded-xl border border-gray-300 bg-[#00A1D6] focus:outline-none focus:ring-2 focus:ring-black text-lg"
+          className="w-full pl-4 pr-10 h-12 rounded-xl bg-[#00A1D6] focus:ring-black text-lg text-white placeholder-white"
+
         />
         <button
           onClick={handleClear}
@@ -36,15 +37,15 @@ export const Searching = () => {
       <div className="w-[320px] bg-[#00A1D6] rounded-lg shadow p-4 space-y-2">
         {query ? (
           <>
-            <p className="text-gray-700">
+            <p className="text-black">
               Resultado para: <strong>{query}</strong>
             </p>
-            <ul className="list-disc pl-5 text-gray-600">
-              <li>Ejemplo 1</li>
+            <ul className="list-disc pl-5 text-black">
+              <li>"Ejemplo 1"</li>
             </ul>
           </>
         ) : (
-          <p className="text-gray-500 italic">
+          <p className="text-black italic">
             Escribe algo para comenzar la búsqueda...
           </p>
         )}

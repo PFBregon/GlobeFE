@@ -12,6 +12,7 @@ export const MenuComponent = () => {
   const navigate = useNavigate();
   return (
     <div className="grid grid-cols-[repeat(2,minmax(150px,1fr))] gap-3 p-3 mb-20">
+        <h1 className="text-2xl mb-0 mt-0 font-bold text-center text-black">Menú</h1> <br />
        <MenuCard
         icon={<img src={Messages} alt="Notificationes" className="w-16 h-16" />}
         title="Notificationes"
