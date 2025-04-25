@@ -10,16 +10,31 @@ export function LoginForm() {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-
-    if (username === "lucia" && password === "1234") {
-      localStorage.setItem("user", username);
-      navigate("/UserProfile");
-    } else {
-      setError("Usuario o contraseña incorrectos.");
+  
+    try {
+      const response = await fetch("http://localhost:8080/api/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ username, password })
+      });
+  
+      if (response.ok) {
+        const student = await response.json();
+        localStorage.setItem("user", JSON.stringify(student)); 
+        navigate("/perfil");
+      } else {
+        setError("Usuario o contraseña incorrectos");
+      }
+    } catch (err) {
+      console.error(err); 
+      setError("Error al conectar con el servidor");
     }
   };
+  
 
   return (
     <div className="relative bg-white bg-opacity-90 p-10 rounded-xl shadow-xl w-[350px] mx-auto">

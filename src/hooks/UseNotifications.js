@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getNotifications } from '../services/api'; // ← esta ruta depende de tu estructura
+import { getNotifications } from '../services/api'; 
 
 export function useNotifications() {
   const [notifications, setNotifications] = useState([]);
