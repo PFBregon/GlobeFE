@@ -5,7 +5,7 @@ import { MenuComponent } from "../components/MenuComponent";
 export const Menu = () => {
   return (
     <MenuLayout>
-      <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", zIndex: 40 }}>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40">
         <MenuComponent />
       </div>
     </MenuLayout>

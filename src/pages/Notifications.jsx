@@ -15,7 +15,7 @@ export const Notifications = () => {
   return (
     <MenuLayout>
       <div className="bg-white bg-opacity-90 p-4 rounded-xl shadow-xl w-[350px] mx-auto">
-        <h2 className="text-xl font-bold text-center text-black">
+        <h2 className="text-xl font-bold text-center text-black font-albert ">
           Notificaciones
         </h2>
         <NotificationList notifications={notifications} />

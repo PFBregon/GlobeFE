@@ -23,7 +23,7 @@ export function LoginForm() {
   };
 
   return (
-    <div className="relative bg-white p-8 rounded-xl shadow-xl w-[350px] mx-auto mt-10">
+    <div className="relative bg-white p-8 rounded-xl shadow-xl w-[350px] mx-auto mt-10 font-albert">
       <form onSubmit={handleLogin} className="flex flex-col gap-6 mb-10">
         <input
           type="text"

@@ -1,6 +1,6 @@
 export const UserCard = ({ name, userIcon, level, academy, teacher, attendance, group }) => {
   return (
-    <div className="bg-white bg-opacity-90 p-6 text-gray-800 rounded-xl shadow-xl w-[320px] text-center">
+    <div className="bg-white bg-opacity-90 p-6 text-gray-800 rounded-xl shadow-xl w-[320px] text-center font-albert">
       <h1 className="text-xxl font-bold mb-4">Welcome!</h1>
       <img src={userIcon} alt={name} className="w-16 h-16 mx-auto mb-4" />
       <p className="text-xl mb-4"><strong>{name}</strong></p>

@@ -12,7 +12,7 @@ export const Searching = () => {
   };
 
   return (
-    <div className="flex flex-col items-center gap-4 mb-40">
+    <div className="flex flex-col items-center gap-4 mb-40 font-albert">
       <h1 className="text-xl font-bold mt-4 text-black text-center">
         ¿Qué quieres encontrar?
       </h1>

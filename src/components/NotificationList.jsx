@@ -3,14 +3,14 @@ import React from "react";
 export const NotificationList = ({ notifications }) => {
   if (!notifications || notifications.length === 0) {
     return (
-      <p className="text-gray-500 italic text-center mt-4">
+      <p className="text-gray-500 italic text-center font-albert mt-4">
         No tienes notificaciones todavía.
       </p>
     );
   }
 
   return (
-    <div className="flex flex-col gap-4 w-[340] overflow-y-auto p-2">
+    <div className="flex flex-col gap-4 w-[340] overflow-y-auto p-2 font-albert">
       {notifications.map((note) => (
         <div
           key={note.id}
