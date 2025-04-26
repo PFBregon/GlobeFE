@@ -16,18 +16,14 @@ export const UserProfile = () => {
       return;
     }
 
-    const userData = JSON.parse(user);
-  
-  fetch(`http://localhost:8080/api/students/${userData.id}`)
-    .then(res => res.json())
-    .then(data => {
-      console.log("Datos completos desde backend:", data);
-      setStudent(data);
-    })
-    .catch(err => {
-      console.error("Error al obtener datos completos del estudiante", err);
-    });
-}, [navigate]);
+    const studentData = JSON.parse(user);
+    console.log("Datos completos desde backend:", studentData);
+    setStudent(studentData);
+  }, [navigate]);
+
+  if (!student) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="relative w-full h-screen flex flex-col justify-between overflow-hidden">
@@ -42,11 +38,11 @@ export const UserProfile = () => {
           <UserCard
             name={`${student.name} ${student.surname}`}
             userIcon={userIcon}
-            level={student.level}
-            academy={student.academyName}
-            teacher={student.teacherName}
-            group={student.group}
-            atendance={student.hasAttendanceIssues}
+            level={student.level ?? "Nivel no disponible"}
+            academy={student.academyName ?? "Sin academia"}
+            teacher={student.teacherName ?? "Sin profesor"}
+            group={student.groupName ?? "Sin grupo"}
+            attendance={student.hasAttendanceIssues}
           />
         </div>
       </div>
