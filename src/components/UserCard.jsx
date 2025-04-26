@@ -7,6 +7,7 @@ export const UserCard = ({ name, userIcon, level, academy, teacher, atendance })
       <p className="text-sm"><strong>Level:</strong> {level}</p>
       <p className="text-sm"><strong>Academy:</strong> {academy}</p>
       <p className="text-sm"><strong>Teacher:</strong> {teacher}</p>
+      <p className="text-sm"><strong>Group:</strong> {group}</p>
       <p className="text-sm">
         <strong>Atendance:</strong> {atendance ? "Con incidencias" : "Sin incidencias"}
       </p>
