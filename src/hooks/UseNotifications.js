@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
-import { getNotifications } from '../services/api'; 
+import { getNotificationsByStudent } from '../services/api'; 
 
-export function useNotifications() {
+export function useNotifications(studentId) {
   const [notifications, setNotifications] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const fetchNotifications = async () => {
     try {
-      const data = await getNotifications();
+      const data = await getNotificationsByStudent(studentId);
       setNotifications(data);
       setError(null);
     } catch (err) {
@@ -19,8 +19,10 @@ export function useNotifications() {
   };
 
   useEffect(() => {
-    fetchNotifications();
-  }, []);
+    if (studentId) {
+      fetchNotifications();
+    }
+  }, [studentId]);
 
   return {
     notifications,

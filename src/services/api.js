@@ -1,5 +1,5 @@
-export const getNotifications = async () => {
-  const response = await fetch('http://localhost:8080/api/notifications');
+export const getNotificationsByStudent = async (studentId) => {
+  const response = await fetch(`http://localhost:8080/api/notifications/student/${studentId}`);
   if (!response.ok) {
     throw new Error('Error al obtener las notificaciones');
   }
@@ -7,18 +7,17 @@ export const getNotifications = async () => {
 };
 
 export const loginStudent = async (username, password) => {
-  const response = await fetch("http://localhost:8080/api/students/login", {
-    method: "POST",
+  const response = await fetch('http://localhost:8080/api/students/login', {
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json"
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ username, password })
+    body: JSON.stringify({ username, password }),
   });
 
   if (!response.ok) {
-    throw new Error("Credenciales incorrectas");
+    throw new Error('Credenciales incorrectas');
   }
 
   return await response.json();
 };
-
