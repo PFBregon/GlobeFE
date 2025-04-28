@@ -1,0 +1,13 @@
+import React from "react";
+import { MenuLayout } from "../layouts/MenuLayout";
+import { MenuComponent } from "../components/MenuComponent"; 
+
+export const Menu = () => {
+  return (
+    <MenuLayout>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40">
+        <MenuComponent />
+      </div>
+    </MenuLayout>
+  );
+};
