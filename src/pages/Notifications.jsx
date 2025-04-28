@@ -5,7 +5,7 @@ import { useNotifications } from "../hooks/useNotifications";
 
 export const Notifications = () => {
   const user = JSON.parse(localStorage.getItem("user"));
-  const studentId = user?.id; // 👈 obtiene correctamente el studentId desde localStorage
+  const studentId = user?.id; 
   const { notifications, loading, error, refetch } = useNotifications(studentId);
 
   const [newTitle, setNewTitle] = useState("");
@@ -80,8 +80,11 @@ export const Notifications = () => {
 
         {submitError && <p className="text-red-500 text-center mb-2">{submitError}</p>}
 
-        <NotificationList notifications={notifications} onDelete={handleDelete} />
-        <div className="mt-2 flex flex-col gap-2 font-albert">
+        <div className="notification-container overflow-y-auto max-h-60 mb-8">
+          <NotificationList notifications={notifications} onDelete={handleDelete} />
+        </div>
+
+        <div className="mb-2 mt-0 flex flex-col gap-2 font-albert">
           <input
             type="text"
             placeholder="Título"

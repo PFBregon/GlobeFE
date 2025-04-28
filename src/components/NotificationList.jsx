@@ -10,25 +10,23 @@ export const NotificationList = ({ notifications, onDelete }) => {
   }
 
   return (
-    <div className="flex flex-col gap-4 w-[340px] overflow-y-auto p-2 font-albert">
+    <div className="flex flex-col gap-2 w-[310px] overflow-y-auto p-2 font-albert">
       {notifications.map((note) => (
         <div
-        key={note.id}
-        className="relative bg-[#00A1D6] text-white rounded-xl px-4 py-4 shadow-md w-full flex justify-between items-start"
-      >
-          <p className="text-sm font-bold">{note.title}</p> 
-          <p className="text-sm">{note.content}</p>
+          key={note.id}
+          className="bg-[#00A1D6] text-white rounded-xl px-4 py-2 shadow-md w-full flex flex-col justify-between"
+        >
+
+          <p className="text-sm font-bold font-albert mb-2">{note.title}</p>
+          <p className="text-sm font-albert mb-2">{note.content}</p>
+
           <button
             onClick={() => onDelete(note.id)}
-            className="text-red-500 hover:text-red-700 text-sm ml-2"
-              title="Eliminar notificación"
-            >
-              🗑️ </button>
-          <span className="text-[10px] text-gray-600 block text-right mt-1">
-            {note.sentAt?.substring(0, 10)}
-          </span>
-
-    
+            className="self-end text-red-500 hover:text-red-700 text-sm mb-1"
+            title="Eliminar notificación"
+          >
+            🗑️
+          </button>
         </div>
       ))}
     </div>
